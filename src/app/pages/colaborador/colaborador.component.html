@@ -1,0 +1,34 @@
+<div class="card border-primary mb-3 centro" style="max-width: 18rem;">
+  <div class="card-header">Colaborador</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{colaborador.nome}}</h5>
+    <h5 class="card-title"> {{colaborador.cargo}}</h5>
+    <div class="botao">
+      <a [routerLink]="['/atualizarColaborador', colaborador.id]" class="botao-color"><img src="../../../assets/editar.svg" alt="" width="45" height="25"></a>
+      <!-- Button trigger modal -->
+
+      <button type="button" class="botao-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img src="../../../assets/excluir.svg" alt="" width="45" height="25"> </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Confirma a exclusão??</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Ao confirmar a exclusão o colaborador será removido da lista de colaboradores.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar.</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="myModal" (click)="excluirColaborador()  ">Sim.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

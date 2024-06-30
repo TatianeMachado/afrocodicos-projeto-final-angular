@@ -1,0 +1,23 @@
+.botao {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  gap: 30px 50px;
+}
+.botao-color {
+  color: #fff;
+  background-color: #fff;
+  border: #fff;
+}
+.modal-body {
+  color: black;
+}
+.centro {
+  display: flex;
+  place-content: center;
+  margin: 35px auto;
+}
+h3 {
+  display: flex;
+  place-content: center;
+}

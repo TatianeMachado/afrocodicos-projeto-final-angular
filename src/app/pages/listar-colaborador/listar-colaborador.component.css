@@ -1,0 +1,6 @@
+.centro,
+h3 {
+  display: flex;
+  place-content: center;
+  margin: 35px auto;
+}

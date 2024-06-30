@@ -1,0 +1,5 @@
+<h3>Conheça nosso quadro de colaboradores</h3>
+
+
+
+@if (this.listarColaboradores.length>=1||this.colaborador.nome!='') {@for (colaborador of listarColaboradores; track colaborador.id) {<app-colaborador [colaborador]="colaborador"></app-colaborador>}}@else {<div class="centro"> Não há colaborador cadastrado no momento!! <img src="../../../assets/image.png" alt=""></div>}

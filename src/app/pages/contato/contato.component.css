@@ -1,0 +1,26 @@
+h3 {
+  display: flex;
+  place-content: center;
+  margin: 35px auto;
+}
+.centro {
+  display: flex;
+  place-content: center;
+  margin: 35px auto;
+  font-size: 25px;
+}
+.redes {
+  display: flex;
+  place-content: center;
+  margin-top: 75px;
+  gap: 65px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+li {
+  list-style-type: none;
+}

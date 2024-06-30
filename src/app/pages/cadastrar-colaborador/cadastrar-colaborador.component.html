@@ -1,0 +1,22 @@
+<p class="fs-2">Cadastrar colaborador</p>
+
+<form>
+  <div class="input">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" aria-describedby="nome" [(ngModel)]="colaborador.nome" name="nome">
+      <div class="visu">{{colaborador.nome}}</div>
+    </div>
+  </div>
+  <div class="input">
+    <div class="mb-3">
+      <label for="cargo" class="form-label">Cargo</label>
+      <input type="text" class="form-control" name="cargo" aria-describedby="cargo" id="cargo" [(ngModel)]="colaborador.cargo">
+      <div class="visu">{{colaborador.cargo}}</div>
+    </div>
+  </div>
+  <div class="botao">
+    <button class="button-blue" (click)="cadastrarColaborador()">Cadastrar colaborador</button>
+    <div><button class="button-gray" (click)="cancelar()">Cancelar</button></div>
+  </div>
+</form>

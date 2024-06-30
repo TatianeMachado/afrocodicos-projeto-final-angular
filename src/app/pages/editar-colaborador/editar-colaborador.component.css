@@ -1,0 +1,35 @@
+.fs-2 {
+  display: flex;
+  place-content: center;
+  margin-top: 45px;
+}
+form {
+  display: block;
+  place-content: center;
+  width: 100%;
+  margin: 20px;
+}
+input {
+  width: 85%;
+}
+.botao {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  gap: 30px 50px;
+}
+.button-blue {
+  background-color: #4289cb;
+  border: #4289cb;
+  padding: 10px;
+  color: aliceblue;
+}
+.button-gray {
+  padding: 10px;
+}
+.input {
+  width: 100%;
+}
+.visu {
+  margin: 20px;
+}
