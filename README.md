@@ -25,3 +25,112 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# API de Colaboradores
+
+Esta API permite gerenciar colaboradores, oferecendo operações para listar, criar, atualizar e excluir colaboradores.
+
+## Endpoints
+
+### 1. Listar Colaboradores
+
+**GET /colaboradores**
+
+Retorna a lista de todos os colaboradores.
+
+**Resposta:**
+
+```json
+[
+  {
+    "nome": "Mayra",
+    "cargo": "desenvolvedor",
+    "id": 1
+  }
+]
+```
+
+### 2. Criar um Novo Colaborador
+
+**POST /colaboradores**
+
+Cria um novo colaborador.
+
+Request Body:
+**Resposta**
+
+```json
+{
+  "nome": "João",
+  "cargo": "gerente"
+}
+```
+
+**Resposta:**
+
+```json
+{
+  "nome": "João",
+  "cargo": "gerente",
+  "id": 2
+}
+```
+
+### 3. Atualizar um Colaborador
+
+**PUT /colaboradores/{id}**
+
+Atualiza as informações de um colaborador existente.
+Parâmetros:
+id (obrigatório): O ID do colaborador a ser atualizado.
+Request Body:
+**Resposta**
+
+```json
+{
+  "nome": "João",
+  "cargo": "diretor"
+}
+```
+
+**Resposta:**
+
+```json
+{
+  "nome": "João",
+  "cargo": "diretor",
+  "id": 2
+}
+```
+
+### 4. Excluir um Colaborador
+
+**DELETE /colaboradores/{id}**
+Parâmetros:
+
+id (obrigatório): O ID do colaborador a ser excluído.
+Request Body:
+**Resposta:**
+
+```json
+{
+  "message": "Colaborador excluído com sucesso."
+}
+```
+
+# Exemplo de Uso
+
+Listar Colaboradores
+curl -X GET http://api.exemplo.com/colaboradores
+Criar um Novo Colaborador
+curl -X POST http://api.exemplo.com/colaboradores -H "Content-Type: application/json" -d '{
+"nome": "João",
+"cargo": "gerente"
+}'
+Atualizar um Colaborador
+curl -X PUT http://api.exemplo.com/colaboradores/2 -H "Content-Type: application/json" -d '{
+"nome": "João",
+"cargo": "diretor"
+}'
+Excluir um Colaborador
+curl -X DELETE http://api.exemplo.com/colaboradores/2
