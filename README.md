@@ -43,7 +43,7 @@ Retorna a lista de todos os colaboradores.
 ```json
 [
   {
-    "nome": "Mayra",
+    "nome": "Mayara",
     "cargo": "desenvolvedor",
     "id": 1
   }
@@ -121,16 +121,18 @@ Request Body:
 # Exemplo de Uso
 
 Listar Colaboradores
-curl -X GET http://api.exemplo.com/colaboradores
+curl -X GET http://localhost:4200/listarColaborador
 Criar um Novo Colaborador
-curl -X POST http://api.exemplo.com/colaboradores -H "Content-Type: application/json" -d '{
+curl -X POST http://localhost:4200/cadastrarColaborador -H "Content-Type: application/json" -d '{
 "nome": "João",
 "cargo": "gerente"
 }'
 Atualizar um Colaborador
-curl -X PUT http://api.exemplo.com/colaboradores/2 -H "Content-Type: application/json" -d '{
+curl -X PUT http://localhost:4200/atualizarColaborador/1 -H "Content-Type: application/json" -d '{
 "nome": "João",
 "cargo": "diretor"
 }'
 Excluir um Colaborador
-curl -X DELETE http://api.exemplo.com/colaboradores/2
+curl -X DELETE http://localhost:4200/listarColaborador
+**ATENÇÂO: O método excluir só fuciona clicando no icone excluir por que ele obrigatóriamente passa por um modal de cofirmação de exclusão que completa a ação**
+SENDO ASSIM: http://localhost:4200/excluirColaborador/1 NÂO FUNCIONARÀ.
